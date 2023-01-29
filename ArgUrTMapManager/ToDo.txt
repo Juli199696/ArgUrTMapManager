@@ -1,0 +1,12 @@
+﻿ToDo:
+- Export Option: Convert wav to ogg (use FFMpeg or LibVorbis/LibOgg ?)
+- Multithreading + ProgressBar
+- Include/Exclude Map Removal Feature?
+- Include unpacked files for all DataArchivManager-Operations if sv_pure = 0 (add Setting)
+- windowcontrol: minimize, etc. ToolWindows when Parent is minimized, etc.
+- Add possibility to abort Background-Operations
+- Animated levelshot images? (ut4_superman)
+- minimap
+
+Mono:
+- FreeImage invoking not working

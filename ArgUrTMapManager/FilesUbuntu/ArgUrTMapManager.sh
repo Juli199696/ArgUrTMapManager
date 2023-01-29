@@ -1,0 +1,1 @@
+mono ArgUrTMapManager.exe > ArgUrTMapManager.log.txt

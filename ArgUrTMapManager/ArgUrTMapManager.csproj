@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E4F54ED-15CD-4769-AEA0-B0F540ADE78B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ArgUrTMapManager</RootNamespace>
+    <AssemblyName>ArgUrTMapManager</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugMono|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugMono\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Mono</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseMono|AnyCPU'">
+    <OutputPath>bin\ReleaseMono\</OutputPath>
+    <DefineConstants>TRACE;Mono</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FreeImageNET">
+      <HintPath>ArgUrTMapManager\libs\FreeImageNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>ArgUrTMapManager\libs\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arenascript.cs" />
+    <Compile Include="BspMap.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Controls\BlackButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackEnumComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackFilenameComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackOutputBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackOutputBox.Designer.cs">
+      <DependentUpon>BlackOutputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BlackTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EntityConversionComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FlagsControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataArchiveCache.cs" />
+    <Compile Include="DataArchivManager.cs" />
+    <Compile Include="EncryptedStream.cs" />
+    <Compile Include="EncryptedXorStream.cs" />
+    <Compile Include="EntityConversion.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FileExtensions.cs" />
+    <Compile Include="FileIO.cs" />
+    <Compile Include="Forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtractMapEntitiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtractMapEntitiesForm.Designer.cs">
+      <DependentUpon>ExtractMapEntitiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GearCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GearCalculatorForm.Designer.cs">
+      <DependentUpon>GearCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LevelshotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LevelshotForm.Designer.cs">
+      <DependentUpon>LevelshotForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MapcycleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MapcycleForm.Designer.cs">
+      <DependentUpon>MapcycleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MapExtractOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MapExtractOptionsForm.Designer.cs">
+      <DependentUpon>MapExtractOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModalToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnixServerForm.cs" />
+    <Compile Include="Forms\UnixServerForm.Designer.cs">
+      <DependentUpon>UnixServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameTypes.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapcycleFile.cs" />
+    <Compile Include="MapEntity.cs" />
+    <Compile Include="MapExtractOptions.cs" />
+    <Compile Include="NotEncryptedStream.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FilesystemEntries.cs" />
+    <Compile Include="ResourceFiles\Icons16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icons16.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceFiles\Icons22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icons22.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceFiles\LocalizedText.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceFiles\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Shaderscript.cs" />
+    <Compile Include="ShaderscriptEntry.cs" />
+    <Compile Include="SurfaceParms.cs" />
+    <Compile Include="XmlDataBase.cs" />
+    <Compile Include="ZipEntryCollection.cs" />
+    <Compile Include="ZipEntryInfo.cs" />
+    <EmbeddedResource Include="Controls\BlackOutputBox.resx">
+      <DependentUpon>BlackOutputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtractMapEntitiesForm.resx">
+      <DependentUpon>ExtractMapEntitiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GearCalculatorForm.resx">
+      <DependentUpon>GearCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LevelshotForm.resx">
+      <DependentUpon>LevelshotForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MapcycleForm.resx">
+      <DependentUpon>MapcycleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MapExtractOptionsForm.resx">
+      <DependentUpon>MapExtractOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnixServerForm.resx">
+      <DependentUpon>UnixServerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Icons16.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons16.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Icons22.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons22.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\LocalizedText.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="FilesUbuntu\ArgUrTMapManager.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FilesUbuntu\InstallRequiredPackages.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\QuakeLiveXorKey" />
+    <None Include="FilesUbuntu\FreeImageNET.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\document-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArgUrTMapManager\ReadMe\GNU General Public License, version 3 %28GPL-3.0%29.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ArgUrTMapManager\ReadMe\Readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArgUrTMapManager\libs\FreeImage.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-down.png" />
+    <None Include="Resources\go-up.png" />
+    <None Include="Resources\preferences-system.png" />
+    <None Include="Resources\accessories-calculator.png" />
+    <None Include="Resources\document-save-as.png" />
+    <None Include="Resources\EmptyWav.wav" />
+    <None Include="ArgUrTMapManager\Entity Conversion Files\wop2UrT example.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ArgUrTMapManager\libs\bspc.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ArgUrTMapManager\libs\bspcwop.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ArgUrTMapManager\libs\libexpat.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ArgUrTMapManager\Entity Conversion Files\wop2UrT ctl2tdm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="ToDo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ArgusLib\ArgusLib.Collections\ArgusLib.Collections.csproj">
+      <Project>{4901C506-6970-4823-BBC3-F32854D2AB2C}</Project>
+      <Name>ArgusLib.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ArgusLib\ArgusLib.Controls\ArgusLib.Controls.csproj">
+      <Project>{bf870c4e-ea2d-4f00-beae-508830f38a43}</Project>
+      <Name>ArgusLib.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ArgusLib\ArgusLib.Drawing\ArgusLib.Drawing.csproj">
+      <Project>{09116344-2bf0-4d58-a7ca-29ed0e4f646b}</Project>
+      <Name>ArgusLib.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ArgusLib\ArgusLib.Math\ArgusLib.Math.csproj">
+      <Project>{3e281f7b-ecd9-4019-b3d2-981dcdf5ba88}</Project>
+      <Name>ArgusLib.Math</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ArgusLib\ArgusLib\ArgusLib.csproj">
+      <Project>{c1efbef9-c46f-432b-924d-5989504ee337}</Project>
+      <Name>ArgusLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Folder Include="ArgUrTMapManager\data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if "$(ConfigurationName)" == "DebugMono" goto gMono
+if "$(ConfigurationName)" == "ReleaseMono" goto gMono
+if "$(ConfigurationName)" == "Release" goto gRelease
+goto gEnd
+:gRelease
+REM explorer.exe "$(TargetDir)"
+goto gEnd
+:gMono
+set monoexe="c:\progra~2\mono-2~1.9\bin\mono.exe"
+%25monoexe%25 $(TargetFileName)
+set monoexe=
+if "$(ConfigurationName)" == "ReleaseMono" goto gRelease
+:gEnd</PostBuildEvent>
+  </PropertyGroup>
+</Project>
