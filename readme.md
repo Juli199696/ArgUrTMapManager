@@ -1,9 +1,12 @@
-argurtmapmanager
-ArgUrT Map Manager
+!!!IMPORTANT!!!
+This is not my code, i just preserved it from beeing deleted from "Microsoft Codeplex".
+
+The code belongs to its owner who gave that source code to download for free on Codeplex.
+Feel free to use or share.
+!!!
 
 Work in Progress
 
-homeissuesdiscussions
 ArgUrT Map Manager
 Experimental Map Manager for Urban Terror and other Quake 3 based games.
 
