@@ -5,6 +5,17 @@ The code belongs to its owner who gave that source code to download for free on 
 Feel free to use or share.
 !!!
 
+
+HOW TO USE
+<------------------------------------------------------------------------------------------->
+Download and extract the ArgUrTMapManager inside your main Urban Terror directory. 
+Open the ArgUrTMapManager.exe and extract or use any tool in the programm to for example add Bot files into maps without.
+
+Extract whole map packages with all textures and files inside. 
+
+Fix maps and use this tool to configure your server.
+<------------------------------------------------------------------------------------------->
+
 Work in Progress
 
 ArgUrT Map Manager
